@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://eliteaircraftdetailing.com/sitemap-index.xml

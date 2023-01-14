@@ -1,0 +1,54 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/aircraft-detailing.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="aircraft detailing"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Aircraft detailing for immaculate airplanes 
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Elite aircraft detailing is committed to thoroughly cleaning and restoring the appearance of your aircraft. This can include washing the exterior, polishing the paint, cleaning the interior, and performing maintenance on various systems such as the cockpit and landing gear..<wbr /> 
+      Our Detailing is typically done on both commercial and private aircraft to improve the appearance and maintain your aircraft's immaculate value. Elite aircraft detailing use specialized equipment and techniques to ensure that your aircraft is thoroughly cleaned and protected from the elements.
+      .
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://eliteaircraftdetailing.com/contact"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        About us
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://eliteaircraftdetailing.com/blog"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        Aircraft Detailing...
+      </Link>
+    </div>
+  </div>
+</main>

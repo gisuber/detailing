@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Experienced and Veteran Aircraft Detailing Technicians",
+    description:
+      "We are skilled professionals who are trained to clean and maintain the exterior and interior of aircrafts to a high standard. Elite aircraft detailers use specialized equipment and techniques to remove dirt, grime, and other debris from the aircraft's surface, as well as polish and buff the paint to restore its shine. We also clean and condition the interior of the aircraft, including the seats, carpets, and windows. As experienced aircraft detailinng technicians, we are familiar with the unique cleaning and maintenance requirements of different types of aircraft and are able to work efficiently and safely while on the job.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "High Grade Aircraft Detailing Products",
+    description:
+      "As an aircraft detailing company dedicated to giving 100%, we only use specialized cleaning solutions, polishes and protectants that are designed to be safe for use on aircraft surfaces. These products are formulated to remove dirt, grime, and other contaminants without harming the aircraft's paint, metal, or other surfaces. We use only the best aircraft detailing products. Our aircraft-grade detergents, aircraft polishes, aircraft waxes and sealants, ceramic coatings, interior detailing products, and exterior detailing products are all of the highest possible standard.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Aircraft Detailing Pricing",
+    description:
+      "The pricing for aircraft detailing services can vary widely depending on a number of factors, including the size of the aircraft, the level of service required, and the location of the business. Some aircraft detailing businesses require us to charge by the hour, while others may be befitting of a flat rate. Rather than using a one-size-fits-all approach, we first have a consultation with our clients to understand their needs and then we proceed with the best pricing action that suits our clients best. ",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Aircraft Detailing Certification",
+    description:
+      "Our technicians have received pertinent aircraft detailing certificates in formal recognition of their knowledge and skills in the field of aircraft cleaning and maintenance. We have been rigorously grilled on aircraft cleaning techniques, safety procedures, and industry regulations. We also meet the experience and education requirements, and adhere to a code of ethics. In addition to the knowledge and trainings we've acquired, we possess a wealth of practical know-how in the area of aircraft detailing.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Touchpoint Aircraft Detailing",
+    description:
+      "We specialize in the process of thoroughly cleaning and sanitizing all the high-touch areas of an aircraft, such as seatback trays, armrests, seatbelts, and overhead compartments, to ensure the safety of passengers and crew. These touchpoints are considered high-risk areas for the spread of germs and bacteria and require special attention during the cleaning process. To achieve this, we use specialized cleaning solutions and equipment to remove dirt, grime, and other contaminants from the touchpoints. If it is required, we also use  UV-C light, ozone generators or other technology to disinfect and sanitize these areas. ",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Immaculate Reviews and Guaranteed Satisfaction",
+    description:
+      "Client satisfaction is a crucial aspect of aircraft detailing, as we know that a satisfied client is more likely to return for future services and recommend our aircraft detailing service to others. To ensure client satisfaction in aircraft detailing, our technicians pay attention to detail and thoroughly clean the aircraft, both inside and out, using the appropriate cleaning solutions and techniques. We also make it a point of duty to communicate with our clients to understand their specific needs and preferences, and take the time to address any concerns or issues. Our aircraft detailing technicians are punctual, professional, and courteous. We are also extremely knnowledgeable about the different types of aircraft and techniques required for different situations.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Elite aircraft detailing services for you
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Learn all about our immaculate aircraft detailing service and see how we can help your airplane become cleaner, bespoke, and safer.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

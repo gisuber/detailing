@@ -1,0 +1,71 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pricing from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Detailing Consultation",
+    price: "Free",
+    popular: false,
+    features: [
+      "30-minutes free consultation",
+      "Discuss needs and expectations",
+      "Unlimited answers to questions",
+    ],
+    button: {
+      text: "Get Started",
+      link: "https://eliteaircraftdetailing.com/contact",
+    },
+  },
+  {
+    name: "Basic Detailing",
+    price: {
+      monthly: "$1999",
+      annual: "$16000",
+      discount: "10%",
+      original: "$24000",
+    },
+    popular: true,
+    features: [
+      "Free consultation",
+      "For small and mid-sized aircrafts",
+      "Dedicated technicians",
+    ],
+    button: {
+      text: "Get Started",
+      link: "https://eliteaircraftdetailing.com/contact",
+    },
+  },
+  {
+    name: "Enterprise Detailing",
+    price: "Custom",
+    popular: false,
+    features: [
+      "All Basic Detailing Features",
+      "For large aircrafts",
+      "Priority and dedicated support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc"
+        >Simple & Predictable pricing. No Surprises.</Fragment
+      >
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+</Layout>
